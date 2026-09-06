@@ -1,0 +1,31 @@
+{
+  "name": "The Impact Project SVC",
+  "short_name": "TIP SVC",
+  "description": "Strategic, data-driven, pro-bono consulting chapter at Sri Venkateswara College, University of Delhi. Solving complex growth, strategy, and social scaling challenges.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050913",
+  "theme_color": "#050913",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
