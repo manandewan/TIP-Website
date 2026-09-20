@@ -667,22 +667,23 @@ a {
     letter-spacing: -0.02em;
     padding: 16px 24px;
     border-radius: 12px;
-    background: rgba(13, 23, 42, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.72);
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.18) 0%, rgba(226, 184, 85, 0.14) 100%);
+    border: 1.5px solid rgba(249, 115, 22, 0.55);
+    color: #f97316;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     transition: var(--transition);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.22);
     cursor: default;
     user-select: none;
 }
 
-.pillar-row:hover {
-    color: #ffffff;
-    transform: translateX(6px);
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(20, 35, 64, 0.7);
+.pillar-row:hover, .pillar-row.pillar-highlight:hover {
+    transform: translateX(8px);
+    border-color: rgba(249, 115, 22, 0.85);
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.26) 0%, rgba(226, 184, 85, 0.20) 100%);
+    color: #fb923c;
+    box-shadow: 0 10px 36px rgba(249, 115, 22, 0.35);
 }
 
 .pillar-row.pillar-highlight {
@@ -690,13 +691,6 @@ a {
     border: 1.5px solid rgba(249, 115, 22, 0.55);
     color: #f97316;
     box-shadow: 0 8px 30px rgba(249, 115, 22, 0.22);
-}
-
-.pillar-row.pillar-highlight:hover {
-    transform: translateX(8px);
-    border-color: rgba(249, 115, 22, 0.8);
-    color: #fb923c;
-    box-shadow: 0 10px 36px rgba(249, 115, 22, 0.32);
 }
 
 /* Impact Metrics Strip */
