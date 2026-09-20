@@ -194,36 +194,84 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 5. Stats Counter Animation Trigger
+    // Helper function to format numbers with Indian numbering system (e.g. 1,35,000)
+    const formatCounterNumber = (num, padZero = false) => {
+        if (padZero && num < 10) {
+            return "0" + num;
+        }
+        return num.toLocaleString("en-IN");
+    };
+
+    // Smooth RAF counter runner with ease-out cubic
+    const runCounterAnimation = (el, target, duration = 1800, padZero = false) => {
+        const startTime = performance.now();
+
+        const update = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const currentVal = Math.floor(easeProgress * target);
+
+            el.textContent = formatCounterNumber(currentVal, padZero);
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = formatCounterNumber(target, padZero);
+            }
+        };
+
+        requestAnimationFrame(update);
+    };
+
+    // 5A. Hero Impact Stats Counter Animation Trigger
+    const heroStatsStrip = document.getElementById("heroStatsStrip");
+    const heroCounters = document.querySelectorAll(".hero-counter");
+    let heroCountersStarted = false;
+
+    const startHeroCounters = () => {
+        if (heroCountersStarted) return;
+        heroCountersStarted = true;
+        heroCounters.forEach(counter => {
+            const target = parseInt(counter.getAttribute("data-val"), 10);
+            const pad = counter.getAttribute("data-pad") === "true";
+            runCounterAnimation(counter, target, 2000, pad);
+        });
+    };
+
+    if (heroStatsStrip && heroCounters.length > 0) {
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startHeroCounters();
+                    heroObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.15 });
+
+        heroObserver.observe(heroStatsStrip);
+    }
+
+    // 5B. Research Publications Stats Counter Animation Trigger
     const statsSection = document.getElementById("research");
     const statNums = document.querySelectorAll(".stat-num");
-    let countersStarted = false;
+    let researchCountersStarted = false;
 
-    const animateCounters = () => {
+    const startResearchCounters = () => {
+        if (researchCountersStarted) return;
+        researchCountersStarted = true;
         statNums.forEach(num => {
-            const target = parseInt(num.getAttribute("data-val"));
-            let current = 0;
-            const duration = 2000; // 2 seconds
-            const stepTime = Math.max(Math.floor(duration / target), 15);
-            
-            const timer = setInterval(() => {
-                current += Math.ceil(target / (duration / stepTime));
-                if (current >= target) {
-                    num.textContent = target;
-                    clearInterval(timer);
-                } else {
-                    num.textContent = current;
-                }
-            }, stepTime);
+            const target = parseInt(num.getAttribute("data-val"), 10);
+            runCounterAnimation(num, target, 2000, false);
         });
     };
 
     if (statsSection && statNums.length > 0) {
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !countersStarted) {
-                    animateCounters();
-                    countersStarted = true;
+                if (entry.isIntersecting) {
+                    startResearchCounters();
+                    statsObserver.disconnect();
                 }
             });
         }, { threshold: 0.15 });

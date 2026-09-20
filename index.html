@@ -51,7 +51,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -68,17 +68,22 @@
                 <img src="assets/logo_icon.png" alt="The Impact Project SVC Logo" class="logo-img">
                 <div class="logo-text">
                     <span class="logo-title">The IMPACT Project</span>
-                    <span class="logo-subtitle">Sri Venkateswara College</span>
+                    <span class="logo-divider"></span>
+                    <div class="logo-subgroup">
+                        <span class="logo-subtitle-top">SVC CHAPTER</span>
+                        <span class="logo-subtitle-bot">UNIVERSITY OF DELHI</span>
+                    </div>
                 </div>
             </a>
             
             <!-- Desktop Nav Menu -->
             <nav class="nav-menu" id="desktopNav">
-                <a href="#about" class="nav-link">About Us</a>
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Initiatives</a>
                 <a href="#projects" class="nav-link">Past Projects</a>
-                <a href="#research" class="nav-link">Research Reports</a>
-                <a href="#team" class="nav-link">Meet the Team</a>
-                <a href="#contact" class="nav-btn">Contact Us</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-btn-join">Join Chapter</a>
             </nav>
             
             <!-- Mobile Menu Toggle Button -->
@@ -92,11 +97,12 @@
 
     <!-- Mobile Nav Overlay -->
     <div class="mobile-nav" id="mobileNavMenu">
-        <a href="#about" class="mobile-link">About Us</a>
+        <a href="#hero" class="mobile-link active">Home</a>
+        <a href="#about" class="mobile-link">Initiatives</a>
         <a href="#projects" class="mobile-link">Past Projects</a>
-        <a href="#research" class="mobile-link">Research Reports</a>
-        <a href="#team" class="mobile-link">Meet the Team</a>
-        <a href="#contact" class="mobile-btn">Contact Us</a>
+        <a href="#research" class="mobile-link">Research</a>
+        <a href="#team" class="mobile-link">Team</a>
+        <a href="#contact" class="mobile-btn">Join Chapter</a>
     </div>
 
     <!-- Main Content -->
@@ -105,14 +111,74 @@
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
             <div class="container hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title reveal-item">From Learning To Making An <span class="text-gradient">Impact</span></h1>
-                    <p class="hero-subtitle reveal-item">
-                        An elite student consulting powerhouse at Sri Venkateswara College, DU, dedicated to solving complex growth, marketing, and strategic challenges for corporate startups, social enterprises, and NGOs globally.
-                    </p>
-                    <div class="hero-ctas reveal-item">
-                        <a href="#projects" class="btn btn-primary" id="exploreWorkBtn">Explore Our Work <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn btn-secondary" id="contactHeroBtn">Partner With Us</a>
+                <div class="hero-split">
+                    <!-- Left Column -->
+                    <div class="hero-left">
+                        <h1 class="hero-title">
+                            Transforming campuses into hubs for <span class="serif-accent">building India.</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            A national undergraduate movement channelising analytical rigor, collaborative leadership, and measurable ground-level action at Sri Venkateswara College.
+                        </p>
+                        <div class="hero-ctas">
+                            <a href="#about" class="btn btn-accent" id="exploreInitiativesBtn">Explore Initiatives <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#contact" class="btn btn-outline" id="joinChapterBtn">Join Chapter</a>
+                        </div>
+                        <div class="hero-social-connect">
+                            <span class="connect-label">CONNECT VIA</span>
+                            <div class="social-icons-group">
+                                <a href="https://www.instagram.com/theimpactprojectsvc/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/theimpactprojectsvc/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://chat.whatsapp.com/IxvMmnj7RcLJquTgzXMEY1" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp Community">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vertical Divider Line -->
+                    <div class="hero-divider"></div>
+
+                    <!-- Right Column: 4-Pillar Typographic Stack -->
+                    <div class="hero-right">
+                        <div class="hero-pillars-stack">
+                            <div class="pillar-row">Provide Clarity</div>
+                            <div class="pillar-row">Offer Exposure</div>
+                            <div class="pillar-row">Enable Action</div>
+                            <div class="pillar-row pillar-highlight">Build India</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Metrics Strip -->
+            <div class="hero-stats-strip scroll-reveal" id="heroStatsStrip">
+                <div class="container stats-strip-container">
+                    <div class="stats-strip-grid">
+                        <div class="stats-strip-col">
+                            <div class="stats-strip-num"><span class="hero-counter" data-val="135000">1,35,000</span><span class="symbol-accent">+</span></div>
+                            <div class="stats-strip-label">STUDENTS ENGAGED</div>
+                            <p class="stats-strip-desc">Across India via conclaves, competitions, and campus fests.</p>
+                        </div>
+                        <div class="stats-strip-col">
+                            <div class="stats-strip-num"><span class="hero-counter" data-val="15">15</span><span class="symbol-accent">+</span></div>
+                            <div class="stats-strip-label">PREMIER CAMPUSES</div>
+                            <p class="stats-strip-desc">Active chapters across IITs, BITS Pilani, and Delhi University colleges.</p>
+                        </div>
+                        <div class="stats-strip-col">
+                            <div class="stats-strip-num"><span class="hero-counter" data-val="2" data-pad="true">02</span></div>
+                            <div class="stats-strip-label">FLAGSHIP SVC PROJECTS</div>
+                            <p class="stats-strip-desc">Project Talent Unbound (Inclusion) and Project Vitality (Biomarkers).</p>
+                        </div>
+                        <div class="stats-strip-col">
+                            <div class="stats-strip-num"><span class="hero-counter" data-val="100">100</span><span class="symbol-accent">%</span></div>
+                            <div class="stats-strip-label">STUDENT OPERATED</div>
+                            <p class="stats-strip-desc">Bottom-up problem solving, zero cash outlay, and measurable impact.</p>
+                        </div>
                     </div>
                 </div>
             </div>
