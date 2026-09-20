@@ -12,7 +12,7 @@
   </p>
 
   <p>
-    <strong>Strategic, data-driven, pro-bono consulting chapter solving complex growth, marketing, and operational challenges for corporate startups, social enterprises, and NGOs globally.</strong>
+    <strong>Strategic, data-driven student consulting chapter solving complex growth, marketing, and operational challenges for corporate startups, social enterprises, and NGOs globally.</strong>
   </p>
 
   <p>

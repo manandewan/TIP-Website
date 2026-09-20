@@ -1,7 +1,7 @@
 {
   "name": "The Impact Project SVC",
   "short_name": "TIP SVC",
-  "description": "Strategic, data-driven, pro-bono consulting chapter at Sri Venkateswara College, University of Delhi. Solving complex growth, strategy, and social scaling challenges.",
+  "description": "Strategic, data-driven student consulting chapter at Sri Venkateswara College, University of Delhi. Solving complex growth, strategy, and social scaling challenges.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
