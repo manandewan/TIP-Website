@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>The Impact Project SVC | Premium Student-Led Consulting</title>
     <meta name="description" content="Strategic, data-driven, pro-bono consulting chapter at Sri Venkateswara College, University of Delhi. Solving complex growth, strategy, and social scaling challenges.">
     
@@ -205,8 +205,11 @@
                     
                     <!-- Bento Box 1: Our DNA (2x1) -->
                     <div class="bento-card span-2 highlight-blue">
-                        <div class="bento-icon-wrapper">
-                            <i class="fa-solid fa-dna bento-icon"></i>
+                        <div class="bento-topbar">
+                            <span class="bento-badge badge-cyan">FOUNDED 2021</span>
+                            <div class="bento-icon-wrapper">
+                                <i class="fa-solid fa-dna bento-icon"></i>
+                            </div>
                         </div>
                         <h3>Our DNA: Actionable Strategy</h3>
                         <p>
@@ -216,6 +219,9 @@
 
                     <!-- Bento Box 2: Selection Rate (1x1) -->
                     <div class="bento-card highlight-purple">
+                        <div class="bento-topbar">
+                            <span class="bento-badge badge-purple">SELECTIVITY</span>
+                        </div>
                         <div class="bento-metric">Top 3%</div>
                         <h3>Select Talent</h3>
                         <p>Our consultants undergo an exhaustive multi-stage selection process screening for core qualitative capabilities, data interpretation skills, and strategic problem-solving. Only the most dedicated student researchers join our team.</p>
@@ -223,6 +229,9 @@
 
                     <!-- Bento Box 3: Timeline Consulting (1x2) -->
                     <div class="bento-card span-y-2 highlight-gold">
+                        <div class="bento-topbar">
+                            <span class="bento-badge badge-amber">5-STAGE ROADMAP</span>
+                        </div>
                         <h3>Our Consulting Framework</h3>
                         <p class="framework-subtitle">A standardized 5-step roadmap delivering optimal strategies</p>
                         
@@ -267,8 +276,11 @@
 
                     <!-- Bento Box 4: Advisory Network (1x1) -->
                     <div class="bento-card highlight-green">
-                        <div class="bento-icon-wrapper">
-                            <i class="fa-solid fa-graduation-cap bento-icon"></i>
+                        <div class="bento-topbar">
+                            <span class="bento-badge badge-green">MENTORSHIP</span>
+                            <div class="bento-icon-wrapper">
+                                <i class="fa-solid fa-graduation-cap bento-icon"></i>
+                            </div>
                         </div>
                         <h3>Advisory Driven</h3>
                         <p>Our engagements are structured and reviewed under the guidance of professional mentors coming from industry giants like ZS Associates and IIM Alumni networks.</p>
@@ -276,8 +288,11 @@
 
                     <!-- Bento Box 5: Dual Impact Model (2x1) -->
                     <div class="bento-card span-2 highlight-red">
-                        <div class="bento-icon-wrapper">
-                            <i class="fa-solid fa-shield-heart bento-icon"></i>
+                        <div class="bento-topbar">
+                            <span class="bento-badge badge-orange">HYBRID MODEL</span>
+                            <div class="bento-icon-wrapper">
+                                <i class="fa-solid fa-shield-heart bento-icon"></i>
+                            </div>
                         </div>
                         <h3>Dual Engagement Model: Corporate Startups & Social NGOs</h3>
                         <p>
@@ -767,7 +782,7 @@
     <!-- Case Studies Slide-Over Side Drawer -->
     <div class="drawer-overlay" id="projectDrawer" onclick="closeProjectDrawer(event)">
         <div class="project-drawer" onclick="event.stopPropagation()">
-            <button class="drawer-close" onclick="closeProjectDrawer()">&times;</button>
+            <button class="drawer-close" onclick="closeProjectDrawer()" aria-label="Close Case Study Details">&times;</button>
             <div class="drawer-header-section">
                 <div class="drawer-header-flex">
                     <img src="" alt="Client Logo" class="drawer-client-logo" id="drawerLogo">
