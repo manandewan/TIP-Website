@@ -355,29 +355,32 @@ function escCloseListener(e) {
     }
 }
 
-// 7. Contact Form Handling
+// 7. Contact / Inquiry Fallback Handling
 function handleFormSubmit(event) {
-    event.preventDefault();
+    if (event) event.preventDefault();
 
-    const clientName = document.getElementById("clientName").value;
-    const email = document.getElementById("clientEmail").value;
-    const message = document.getElementById("clientMsg").value;
+    const nameEl = document.getElementById("clientName");
+    const emailEl = document.getElementById("clientEmail");
+    const msgEl = document.getElementById("clientMsg");
+    const formEl = document.getElementById("contactForm");
+    const successEl = document.getElementById("formSuccessMessage");
 
-    if (!clientName || !email || !message) {
+    if (!nameEl || !emailEl || !msgEl || !formEl || !successEl) return;
+
+    if (!nameEl.value || !emailEl.value || !msgEl.value) {
         alert("Please fill in all required fields.");
         return;
     }
 
-    // Toggle forms and show success state
-    document.getElementById("contactForm").style.display = "none";
-    document.getElementById("formSuccessMessage").style.display = "block";
+    formEl.style.display = "none";
+    successEl.style.display = "block";
 }
 
 function resetContactForm() {
-    // Reset form elements
-    document.getElementById("contactForm").reset();
-    
-    // Toggle containers back
-    document.getElementById("formSuccessMessage").style.display = "none";
-    document.getElementById("contactForm").style.display = "block";
+    const formEl = document.getElementById("contactForm");
+    const successEl = document.getElementById("formSuccessMessage");
+    if (!formEl || !successEl) return;
+    formEl.reset();
+    successEl.style.display = "none";
+    formEl.style.display = "block";
 }
