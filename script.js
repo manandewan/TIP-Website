@@ -235,7 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
         heroCounters.forEach(counter => {
             const target = parseInt(counter.getAttribute("data-val"), 10);
             const pad = counter.getAttribute("data-pad") === "true";
-            runCounterAnimation(counter, target, 2000, pad);
+            const duration = target <= 10 ? 1200 : 1800;
+            runCounterAnimation(counter, target, duration, pad);
         });
     };
 
