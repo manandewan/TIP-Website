@@ -62,7 +62,7 @@
 
 body {
     background-color: var(--bg-base);
-    background-image: linear-gradient(rgba(5, 9, 19, 0.45), rgba(5, 9, 19, 0.65)), url('./assets/desktop_bg.jpg');
+    background-image: linear-gradient(rgba(5, 9, 19, 0.35), rgba(5, 9, 19, 0.55)), url('./assets/new_impact_bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
