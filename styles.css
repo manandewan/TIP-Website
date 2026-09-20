@@ -956,7 +956,6 @@ a {
 }
 
 .stat-card:nth-child(2) .stat-num::after { content: '%'; }
-.stat-card:nth-child(3) .stat-num::before { content: '$'; }
 .stat-card:nth-child(3) .stat-num::after { content: '¢'; }
 .stat-card:nth-child(4) .stat-num::after { content: 'B+'; }
 
@@ -1738,6 +1737,124 @@ a {
         gap: 15px;
         text-align: center;
     }
+
+    /* Research Reports Mobile Improvements */
+    .research-section {
+        padding: 70px 0;
+    }
+
+    .report-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .report-visual {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .report-cover-wrapper {
+        width: 100%;
+        max-width: 320px;
+        padding: 32px 20px;
+        aspect-ratio: auto;
+        border-radius: var(--radius-md);
+        margin: 0 auto;
+    }
+
+    .report-icon {
+        font-size: 40px;
+        margin-bottom: 14px;
+    }
+
+    .report-cover-wrapper h4 {
+        font-size: 18px;
+        line-height: 1.35;
+        margin-bottom: 10px;
+    }
+
+    .report-org {
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        margin-bottom: 16px;
+    }
+
+    .report-date {
+        font-size: 10px;
+        padding: 4px 12px;
+    }
+
+    .report-info {
+        width: 100%;
+    }
+
+    .report-info h3 {
+        font-size: 22px;
+        line-height: 1.35;
+        margin-bottom: 12px;
+    }
+
+    .report-info p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .stat-card {
+        padding: 16px 14px;
+        border-radius: var(--radius-md);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .stat-num {
+        font-size: 30px;
+        margin-bottom: 4px;
+    }
+
+    .stat-label {
+        font-size: 11.5px;
+        line-height: 1.35;
+    }
+
+    .highlights-list {
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    .highlights-list li {
+        font-size: 13.5px;
+        line-height: 1.55;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .highlights-list li i {
+        flex-shrink: 0;
+        margin-top: 3px;
+        font-size: 15px;
+    }
+
+    .report-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .report-actions .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 14px 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1755,5 +1872,26 @@ a {
     
     .contact-form-panel {
         padding: 24px;
+    }
+
+    .stat-card {
+        padding: 14px 10px;
+    }
+
+    .stat-num {
+        font-size: 26px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .report-cover-wrapper {
+        padding: 24px 16px;
+        max-width: 290px;
+    }
+
+    .report-cover-wrapper h4 {
+        font-size: 16.5px;
     }
 }

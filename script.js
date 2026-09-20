@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     countersStarted = true;
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.15 });
 
         statsObserver.observe(statsSection);
     }
