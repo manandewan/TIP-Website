@@ -451,19 +451,22 @@ a {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: rgba(7, 13, 25, 0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    height: calc(100dvh - 80px);
+    background-color: rgba(6, 11, 22, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-xl);
-    padding: 20px 24px;
+    padding: 32px 24px 48px 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     transform: translateY(-120%);
     visibility: hidden;
     pointer-events: none;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
     z-index: 999;
     overscroll-behavior: contain;
 }
@@ -2864,6 +2867,15 @@ a {
         font-size: 11px;
     }
     
+    .about-section,
+    .projects-section,
+    .research-section,
+    .advisory-section,
+    .team-section,
+    .join-section {
+        padding: 65px 0;
+    }
+
     .bento-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -2895,9 +2907,38 @@ a {
     .practice-section-title {
         font-size: 26px;
     }
+
+    .filter-tabs {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .filter-tab {
+        padding: 9px 18px;
+        font-size: 13px;
+        min-height: 44px;
+    }
     
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 24px 20px;
+    }
+
+    .project-drawer {
+        max-width: 100%;
+        padding: 24px 20px;
+    }
+
+    .drawer-header-section {
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+    }
+
+    .drawer-title {
+        font-size: 20px;
     }
     
     .pillars-grid {
@@ -2906,6 +2947,23 @@ a {
     
     .mentors-grid {
         grid-template-columns: 1fr;
+    }
+
+    .team-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .team-card {
+        padding: 12px;
+    }
+
+    .member-name {
+        font-size: 14px;
+    }
+
+    .member-role {
+        font-size: 10.5px;
     }
     
     .contact-grid {
@@ -3196,5 +3254,38 @@ a {
 
     .practice-section-title {
         font-size: 24px;
+    }
+
+    .about-section,
+    .projects-section,
+    .research-section,
+    .advisory-section,
+    .team-section,
+    .join-section {
+        padding: 50px 0;
+    }
+
+    .team-grid-container {
+        gap: 10px;
+    }
+
+    .team-card {
+        padding: 10px;
+    }
+
+    .member-name {
+        font-size: 13px;
+    }
+
+    .member-role {
+        font-size: 9.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 }

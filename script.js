@@ -127,8 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (menuToggle && mobileNavMenu) {
         menuToggle.addEventListener("click", () => {
-            menuToggle.classList.toggle("active");
+            const isActive = menuToggle.classList.toggle("active");
             mobileNavMenu.classList.toggle("active");
+            document.body.style.overflow = isActive ? "hidden" : "";
         });
         
         // Close menu when clicking links
@@ -137,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", () => {
                 menuToggle.classList.remove("active");
                 mobileNavMenu.classList.remove("active");
+                document.body.style.overflow = "";
             });
         });
     }
@@ -154,8 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
+            threshold: 0.02,
+            rootMargin: "0px 0px 60px 0px"
         });
 
         revealElements.forEach(el => revealObserver.observe(el));

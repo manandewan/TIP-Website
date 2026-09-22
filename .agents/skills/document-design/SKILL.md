@@ -1,10 +1,10 @@
 ---
 name: document-design
-description: Design, typeset, and produce clean, professional documents (executive memos, case competition briefs, whitepapers, proposals, Google Doc/Word/PDF style documents). Strictly enforces vertical rhythm, page budgeting (no awkward empty white spaces), typography scales, table formatting, callout cards, and executive visual standards.
+description: Design, typeset, and produce clean, professional documents (executive memos, case competition briefs, whitepapers, proposals, Google Doc/Word/PDF style documents). Strictly enforces vertical rhythm, breathable page budgeting (neither cramped nor leaving huge bottom voids), typography scales, table formatting, and executive visual standards.
 argument-hint: "[document-type] [page-count]"
 metadata:
   author: tip-design-standards
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Document Design & Typesetting Standards
@@ -13,90 +13,56 @@ Guide for producing world-class, clean, executive-ready "normal documents" (PDF 
 
 ---
 
-## 1. Golden Rule: No Awkward Empty Whitespace (Page Budgeting)
+## 1. Core Principle: Let the Document Breathe (Balanced Page Budgeting)
 
-When producing multi-page documents (especially PDFs and print-ready DOCX):
-- **Never leave >20% empty vertical white space** at the bottom of an internal page unless it is the intentional final page of the document.
-- **Do not insert artificial page breaks (`PageBreak()`)** without calculating or verifying the vertical height of the preceding page.
-- **Budget content per page intentionally**:
-  - If a page has extra vertical space, enrich it with:
-    - **Exhibit / Data Tables** (e.g. hourly footfall, competitor benchmarking, survey results).
-    - **Unit Economics / Financial Cards** (e.g. gross margin breakdown, revenue math).
-    - **Executive Callout Boxes** (e.g. "Key Strategic Takeaway", "Field Note", "Management Observation").
-    - **Structured Metric Grids** (2-column or 3-column stat blocks).
-  - If a page is over-flowing, trim secondary prose, tighten table padding (from 8pt to 5pt), or adjust paragraph `spaceAfter`.
-- **Target Page Density**: 80% to 95% of printable vertical height utilized on every page.
+A great executive document strikes a balance between density and breathing room:
+- **Avoid Claustrophobic Cramping**: Never squeeze tiny fonts (7.5pt/8pt) or razor-thin line spacing just to pack extra content into a page. 
+- **Avoid Arbitrary Page-Break Voids**: Do not insert artificial `PageBreak()` calls that leave >30% empty space at the bottom of an internal page.
+- **Natural Breathing Room**: Target an **80% to 88% vertical fill rate** per page. Allow comfortable whitespace between sections, after tables, and around callouts.
+- **Comfortable Margins**: Use standard **0.75 in to 0.85 in** (54pt–61pt) margins for portrait letter/A4 pages. Avoid extreme 0.5-inch edge-to-edge margins unless creating a dense cheat-sheet or flyer.
 
 ---
 
-## 2. Document Anatomy & Hierarchy
+## 2. Typography Hierarchy & Spacing Rhythm
 
-Every standard business/academic brief must contain these consistent structural layers:
+Executive readability depends on generous line height (leading) and clear typographic scale:
 
-### A. Document Header (Top of Page 1)
-- **Brand Identity**: Clean logo placement (top-left or top-right, balanced aspect ratio).
-- **Metadata Tag**: Organization name, Track / Category, Target Audience, Date.
-- **Document Title**: 20–24pt Bold, crisp line height.
-- **Subtitle / Executive Summary**: 10–11pt italic or light secondary text.
-- **Divider Rule**: 1–1.5pt subtle brand accent line.
-
-### B. Section Headings (H1 & H2)
-- **H1**: 13–15pt Bold with 10–14pt space before, 4–6pt space after. Keep with next (`keepWithNext = True` in ReportLab / `keep_with_next = True` in docx).
-- **H2**: 11–12pt Bold, uppercase or title case.
-- **Accent**: Optional left-bar accent or badge style (`[ EXHIBIT 1 ]`).
-
-### C. Body Typography
-- **Font Stack**: Helvetica / Arial / Calibri / Georgia / Inter.
-- **Font Size**: 9.5pt to 10.5pt for body text.
-- **Leading / Line Spacing**: 1.35x to 1.4x (e.g., 10pt font with 14pt leading).
-- **Paragraph Spacing**: 5pt to 7pt after paragraphs; avoid double carriage returns (`\n\n`).
-
-### D. Data Exhibits & Tables
-- **Header Row**: Solid background (brand dark navy `#1E293B` or `#1B365D`) with white bold text.
-- **Zebra Striping**: Alternating light row fill (`#F8FAFC` or `#F1F5F9`).
-- **Cell Padding**: 5pt–6pt top/bottom, 8pt–10pt left/right.
-- **Alignment**: Text left-aligned; numbers and currency right-aligned; statuses/dates centered.
-- **Borders**: Crisp 0.5pt subtle borders (`#CBD5E1` or `#E2E8F0`).
-
-### E. Callout & Highlight Boxes
-- Light tinted background (e.g., `#F0FDF4` for green, `#EFF6FF` for blue, `#FEF3C7` for amber).
-- Thick left accent border (3–4pt solid color).
-- Inner padding (8–12pt all around).
-- Bold lead-in header (e.g., `💡 Strategic Insight:` or `⚠️ Core Constraint:`).
-
-### F. Running Headers & Footers (Pages 2+)
-- **Header**: Document title & category (8–9pt muted) with subtle 0.5pt line.
-- **Footer**: Organization name, Confidentiality notice, and dynamic page number: `Page X of Y`.
+| Element | Font Size | Leading (Line Height) | Spacing Before | Spacing After | Notes |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Document Title** | 16–18 pt | 20–22 pt | 0 pt | 2–4 pt | Bold, primary brand navy (`#0F294A`) |
+| **Subtitle** | 10–11 pt | 14–15 pt | 0 pt | 8–10 pt | Oblique/italic, secondary sky accent (`#0284C7`) |
+| **H1 (Main Section)** | 11.5–12.5 pt | 15–16 pt | 10–12 pt | 3–4 pt | Bold, `keepWithNext = True` |
+| **H2 (Exhibit / Subsection)** | 9.5–10.5 pt | 13–14 pt | 8–10 pt | 3–4 pt | Bold, uppercase or small caps |
+| **Body Paragraphs** | 9.2–9.8 pt | 13.5–14.5 pt | 0 pt | 5–6 pt | Slate dark gray (`#334155`), 1.4x–1.5x leading |
+| **Bullet Items** | 9.0–9.5 pt | 13.0–14.0 pt | 1 pt | 3–5 pt | Left indent 12–16 pt |
+| **Table Headers** | 8.2–8.8 pt | 11.0–11.5 pt | — | — | White bold on dark slate (`#1E293B`) |
+| **Table Cells** | 8.2–8.8 pt | 11.5–12.5 pt | — | — | Padding: 4.5–6pt top/bottom, 6–8pt left/right |
+| **Running Header / Footer** | 7.5–8.0 pt | 10 pt | 0 pt | 0 pt | Muted slate (`#64748B`), centered or edge-aligned |
 
 ---
 
-## 3. Implementation Specifics
+## 3. Table & Callout Card Standards
 
-### ReportLab (Python PDF Generation)
-- Always use `KeepTogether` on tables, callout blocks, and section-header-plus-first-paragraph pairs to prevent awkward splits across pages.
-- Set `keepWithNext = True` on all heading `ParagraphStyle`s.
-- Glyph Safety: Built-in Helvetica lacks unicode glyphs (`₹`, `★`, `✓`, `™`). Always use ASCII-safe equivalents:
+### Tables
+- **Header**: Deep slate background (`#1E293B`) with crisp white bold text.
+- **Zebra Striping**: Alternating light rows (`#F8FAFC` and `#FFFFFF`).
+- **Borders**: Clean, subtle light grey gridlines (`#E2E8F0` or `#CBD5E1`), 0.5 pt thickness. Avoid harsh black borders.
+- **Alignment**:
+  - Text columns: Left-aligned.
+  - Financial figures, percentages, and metrics: Right-aligned.
+  - Status tags / Phase names: Left or center-aligned.
+- **Padding**: Never drop below 4pt vertical padding; 5–6pt is ideal for readability.
+
+### Callout Boxes
+- Soft pastel background (e.g., `#F0F9FF` for sky blue, `#F8FAFC` for neutral, `#FEFCE8` for warm insight).
+- Clean accent border (1.0 pt solid `#38BDF8` or `#CBD5E1`).
+- Generous inner padding: **8 pt to 10 pt vertical**, **10 pt to 14 pt horizontal**.
+
+---
+
+## 4. Glyph Safety
+- ReportLab built-in Helvetica cannot render non-ASCII characters (e.g., `₹`, `★`, `✓`, `•` in certain encodings).
+- Always use ASCII equivalents:
   - Use `Rs.` or `INR` instead of `₹`.
-  - Use `[Tier 1]` or `* * *` instead of `★ ★ ★`.
-  - Use `[x]` or `[OK]` instead of unicode checkmarks.
-- Compute column widths explicitly to fill the exact printable width:
-  - Printable width = `PAGE_WIDTH - leftMargin - rightMargin` (e.g., `595.27 - 2*36 = 523.27pt` for A4 with 0.5in margins).
-  - Sum of table column widths **must equal** printable width.
-
-### Python-docx (Word Document Generation)
-- Set paragraph formatting explicitly (`space_before`, `space_after`, `line_spacing`).
-- Table cell margins: Set top, bottom, left, right margins via XML `w:tcMar`.
-- Prevent row splitting across pages: `trPr = row._tr.get_or_add_trPr(); trPr.append(parse_xml(r'<w:cantSplit xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"/>'))`.
-- Repeat header row on every page: `trPr.append(parse_xml(r'<w:tblHeader xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"/>'))`.
-
----
-
-## 4. Verification Checklist Before Delivering Any Document
-
-1. [ ] **Page Count & Vertical Balance**:
-   - Check rendered pages visually (e.g. convert PDF to PNG and view).
-   - Is any internal page less than 75% full? If yes, re-budget content or remove premature page breaks.
-2. [ ] **No Orphan Headings**: Does any heading sit alone at the bottom of a page without its body text?
-3. [ ] **Table Formatting**: Are column widths properly fitted? Are numbers right-aligned? Is header readable?
-4. [ ] **Font Glyphs**: Are there any black boxes or missing characters (`■`)?
-5. [ ] **Header/Footer Consistency**: Does the logo appear crisp? Are page numbers accurate?
+  - Use `Level 1 / 5` instead of `★☆☆☆☆`.
+  - Use standard bullet entities or ASCII `-` / `*`.
