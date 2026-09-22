@@ -2194,6 +2194,64 @@ a {
     max-width: 480px;
 }
 
+.join-action-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.btn-apply-now {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+    color: #ffffff !important;
+    min-height: 48px;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 14.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(249, 115, 22, 0.6) !important;
+    box-shadow: 0 4px 22px rgba(249, 115, 22, 0.4);
+    touch-action: manipulation;
+    transition: var(--transition);
+}
+
+.btn-apply-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.6);
+    filter: brightness(1.1);
+}
+
+.btn-case-challenge {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.04) 100%) !important;
+    color: #fbbf24 !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
+    min-height: 48px;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 14.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 18px rgba(245, 158, 11, 0.15);
+    touch-action: manipulation;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: var(--transition);
+}
+
+.btn-case-challenge:hover {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.1) 100%) !important;
+    border-color: rgba(245, 158, 11, 0.85) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 26px rgba(245, 158, 11, 0.35);
+}
+
 .join-buttons-group {
     display: flex;
     align-items: center;
@@ -2231,6 +2289,40 @@ a {
     align-items: center;
     gap: 8px;
     touch-action: manipulation;
+}
+
+.join-social-channels {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+    color: var(--text-muted);
+}
+
+.social-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    min-height: 44px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: var(--transition);
+}
+
+.social-chip:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 .join-footer-note {
@@ -2996,6 +3088,13 @@ a {
         gap: 20px;
     }
 
+    .join-action-row {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
     .join-buttons-group {
         width: 100%;
         flex-direction: column;
@@ -3004,7 +3103,9 @@ a {
     }
 
     .btn-whatsapp-join,
-    .btn-social-join {
+    .btn-social-join,
+    .btn-apply-now,
+    .btn-case-challenge {
         width: 100%;
         justify-content: center;
         text-align: center;
