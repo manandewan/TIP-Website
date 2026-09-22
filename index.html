@@ -97,12 +97,24 @@
 
     <!-- Mobile Nav Overlay -->
     <div class="mobile-nav" id="mobileNavMenu">
-        <a href="#hero" class="mobile-link active">Home</a>
-        <a href="#about" class="mobile-link">Initiatives</a>
-        <a href="#projects" class="mobile-link">Past Projects</a>
-        <a href="#research" class="mobile-link">Research</a>
-        <a href="#team" class="mobile-link">Team</a>
-        <a href="#join" class="mobile-btn">Join Chapter</a>
+        <div class="mobile-nav-links">
+            <a href="#hero" class="mobile-link active"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#about" class="mobile-link"><span>Initiatives</span> <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#projects" class="mobile-link"><span>Past Projects</span> <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#research" class="mobile-link"><span>Research</span> <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#team" class="mobile-link"><span>Team</span> <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#join" class="mobile-btn"><span>Join Chapter</span> <i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+        
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-socials">
+                <a href="https://www.linkedin.com/company/theimpactprojectsvc/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/theimpactprojectsvc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://chat.whatsapp.com/IxvMmnj7RcLJquTgzXMEY1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Community"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <a href="mailto:theimpactprojectsvc@gmail.com" class="mobile-nav-email"><i class="fa-solid fa-envelope"></i> theimpactprojectsvc@gmail.com</a>
+            <span class="mobile-nav-inst">Sri Venkateswara College • University of Delhi</span>
+        </div>
     </div>
 
     <!-- Main Content -->
@@ -146,10 +158,38 @@
                     <!-- Right Column: 4-Pillar Typographic Stack from Documents -->
                     <div class="hero-right">
                         <div class="hero-pillars-stack">
-                            <div class="pillar-row pillar-highlight">Strategic Advisory</div>
-                            <div class="pillar-row pillar-highlight">Data-Driven Research</div>
-                            <div class="pillar-row pillar-highlight">Actionable Roadmaps</div>
-                            <div class="pillar-row pillar-highlight">Real-World Impact</div>
+                            <div class="pillar-row pillar-highlight">
+                                <div class="pillar-icon"><i class="fa-solid fa-compass"></i></div>
+                                <div class="pillar-content">
+                                    <span class="pillar-title">Strategic Advisory</span>
+                                    <span class="pillar-sub">GTM & Market Expansion</span>
+                                </div>
+                                <div class="pillar-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                            <div class="pillar-row pillar-highlight">
+                                <div class="pillar-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="pillar-content">
+                                    <span class="pillar-title">Data-Driven Research</span>
+                                    <span class="pillar-sub">Primary Surveys & Pricing</span>
+                                </div>
+                                <div class="pillar-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                            <div class="pillar-row pillar-highlight">
+                                <div class="pillar-icon"><i class="fa-solid fa-route"></i></div>
+                                <div class="pillar-content">
+                                    <span class="pillar-title">Actionable Roadmaps</span>
+                                    <span class="pillar-sub">Phased Execution Plans</span>
+                                </div>
+                                <div class="pillar-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                            <div class="pillar-row pillar-highlight">
+                                <div class="pillar-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="pillar-content">
+                                    <span class="pillar-title">Real-World Impact</span>
+                                    <span class="pillar-sub">100% Tangible Outcomes</span>
+                                </div>
+                                <div class="pillar-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -500,7 +540,7 @@
                         <div class="project-tag">NGO • Social Strategy</div>
                         <h3 class="project-client">Sadagamaya</h3>
                         <p class="project-brief">Social welfare organization. Executed behavioral studies to boost blood donor drives and built financial allocation sheets.</p>
-                        <div class="project-stat"><i class="fa-solid fa-chart-line text-green"></i> Structured marketing portal & automated allocation</div>
+                        <div class="project-stat"><i class="fa-solid fa-chart-line text-green"></i> 100% Automated financial model & donor funnel</div>
                         <button class="project-btn" onclick="openProjectDrawer('sadagamaya')">View Case Study <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
 
@@ -566,19 +606,19 @@
                         <!-- Highlights Stats Grid -->
                         <div class="stats-grid">
                             <div class="stat-card">
-                                <div class="stat-num" data-val="130">0</div>
+                                <div class="stat-num" data-val="130"><span class="counter-value">130</span><span class="stat-unit">M+</span></div>
                                 <div class="stat-label">Million Demat Accounts (FY25) vs 20M (FY15)</div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-num" data-val="9">0</div>
-                                <div class="stat-label">% Share of Household Savings in Equities</div>
+                                <div class="stat-num" data-val="9.5"><span class="counter-value">9.5</span><span class="stat-unit">%</span></div>
+                                <div class="stat-label">Share of Household Savings in Equities</div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-num" data-val="15">0</div>
+                                <div class="stat-num" data-val="15"><span class="counter-value">15</span><span class="stat-unit">¢</span></div>
                                 <div class="stat-label">Cent CAC ($0.15) via India Stack vs $23 historically</div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-num" data-val="237">0</div>
+                                <div class="stat-num" data-val="237"><span class="stat-prefix">$</span><span class="counter-value">237</span><span class="stat-unit">B+</span></div>
                                 <div class="stat-label">Billion Wealthtech Sector Valuation projected by 2030</div>
                             </div>
                         </div>
@@ -664,14 +704,14 @@
                     <h3 class="team-block-title">Core Leadership</h3>
                     <div class="team-grid-container core-grid">
                         
-                        <!-- Nitya Agarwal -->
+                        <!-- Nitya Aggarwal -->
                         <div class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/team/core_2.jpg" alt="Nitya Agarwal" class="team-img">
+                                <img src="assets/team/core_2.jpg" alt="Nitya Aggarwal" class="team-img">
                             </div>
                             <div class="team-card-info">
-                                <h4 class="member-name">Nitya Agarwal</h4>
-                                <p class="member-role">President</p>
+                                <h4 class="member-name">Nitya Aggarwal</h4>
+                                <span class="member-role-badge">President</span>
                             </div>
                         </div>
 
@@ -682,7 +722,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Rhitankar Biswas</h4>
-                                <p class="member-role">Vice President</p>
+                                <span class="member-role-badge">Vice President</span>
                             </div>
                         </div>
 
@@ -693,7 +733,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Hrishi Kansal</h4>
-                                <p class="member-role">Director of Research</p>
+                                <span class="member-role-badge">Director of Research</span>
                             </div>
                         </div>
 
@@ -704,7 +744,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Manan Dewan</h4>
-                                <p class="member-role">Director of Marketing</p>
+                                <span class="member-role-badge">Director of Marketing</span>
                             </div>
                         </div>
 
@@ -715,7 +755,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Himanshi Hotwani</h4>
-                                <p class="member-role">Director of Public Relations</p>
+                                <span class="member-role-badge">Director of PR</span>
                             </div>
                         </div>
 
@@ -734,7 +774,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Krisha Sarna & Riddhi Jain</h4>
-                                <p class="member-role">Research & Development Heads</p>
+                                <span class="member-role-badge">R&D Heads</span>
                             </div>
                         </div>
 
@@ -745,7 +785,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Sarthak Singh</h4>
-                                <p class="member-role">Social Media & Tech Head</p>
+                                <span class="member-role-badge">Social Media & Tech</span>
                             </div>
                         </div>
 
@@ -756,7 +796,7 @@
                             </div>
                             <div class="team-card-info">
                                 <h4 class="member-name">Abhishek Kumar & Saanvi Khurana</h4>
-                                <p class="member-role">PR & Outreach Heads</p>
+                                <span class="member-role-badge">PR & Outreach</span>
                             </div>
                         </div>
 
@@ -944,9 +984,11 @@
             </div>
 
             <div class="footer-social">
-                <h5>Our Network</h5>
-                <a href="https://www.linkedin.com/posts/theimpactprojectsvc_indian-brokerage-industry-reporttip-activity-7442837967922196480-zFMK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADv3XL4BJATYOSnTtzb1hummQfUZGRoA47o" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn Activity</a>
-                <span class="social-tagline">SVC Finance & Strategy Chapter</span>
+                <h5>Our Network & Contact</h5>
+                <a href="https://www.linkedin.com/company/theimpactprojectsvc/posts/?feedView=all" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn Company Page</a>
+                <a href="https://www.instagram.com/theimpactprojectsvc/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram Updates</a>
+                <a href="mailto:theimpactprojectsvc@gmail.com"><i class="fa-solid fa-envelope"></i> theimpactprojectsvc@gmail.com</a>
+                <span class="social-tagline"><i class="fa-solid fa-building-columns"></i> Sri Venkateswara College, Dhaula Kuan, New Delhi</span>
             </div>
         </div>
         

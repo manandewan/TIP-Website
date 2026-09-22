@@ -205,21 +205,27 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Smooth RAF counter runner with ease-out cubic
-    const runCounterAnimation = (el, target, duration = 1800, padZero = false) => {
+    const runCounterAnimation = (el, target, duration = 1200, padZero = false) => {
         const startTime = performance.now();
+        const isDecimal = target.toString().includes(".");
 
         const update = (currentTime) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const easeProgress = 1 - Math.pow(1 - progress, 3);
-            const currentVal = Math.floor(easeProgress * target);
 
-            el.textContent = formatCounterNumber(currentVal, padZero);
+            if (isDecimal) {
+                const currentVal = (easeProgress * target).toFixed(1);
+                el.textContent = currentVal;
+            } else {
+                const currentVal = Math.floor(easeProgress * target);
+                el.textContent = formatCounterNumber(currentVal, padZero);
+            }
 
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
-                el.textContent = formatCounterNumber(target, padZero);
+                el.textContent = isDecimal ? target.toFixed(1) : formatCounterNumber(target, padZero);
             }
         };
 
@@ -264,8 +270,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (researchCountersStarted) return;
         researchCountersStarted = true;
         statNums.forEach(num => {
-            const target = parseInt(num.getAttribute("data-val"), 10);
-            runCounterAnimation(num, target, 2000, false);
+            const target = parseFloat(num.getAttribute("data-val"));
+            const targetEl = num.querySelector(".counter-value") || num;
+            if (!isNaN(target)) {
+                runCounterAnimation(targetEl, target, 1200, false);
+            }
         });
     };
 
